@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="settings-container">
+        <h1>Tic Tac Toe</h1>
+        <p>Welcome, <span id="logged-in-user">Guest</span></p>
+        
+        <form id="settings-form" onsubmit="saveSettings(event)">
+            <label for="grid-size">Level:</label>
+            <select id="grid-size" name="grid-size">
+                <option value="3">Easy</option>
+                <option value="4">Medium</option>
+                <option value="5">Hard</option>
+            </select>
+
+            <label for="theme">Theme:</label>
+            <select id="theme" name="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+
+            <label for="mode">Game Mode:</label>
+            <select id="mode" name="mode">
+                <option value="1">One Player</option>
+                <option value="2">Two Players</option>
+            </select>
+
+            <div id="player-names">
+                <label for="player1-name">Player 1 Name:</label>
+                <input type="text" id="player1-name" name="player1-name" required>
+
+                <div id="player2-container">
+                    <label for="player2-name">Player 2 Name:</label>
+                    <input type="text" id="player2-name" name="player2-name">
+                </div>
+            </div>
+
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

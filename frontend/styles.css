@@ -1,0 +1,490 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Settings Container */
+#settings-container {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 65%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    max-height: 100vh;
+}
+
+#settings-container:hover {
+    transform: scale(1.03);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    font-weight: bold;
+}
+
+form select, form input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+form select:focus, form input:focus {
+    border-color: #2575fc;
+    outline: none;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+}
+
+/* Buttons */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+}
+
+/* Game Container */
+#game-container {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 65%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+    padding: 20px; /* Padding for inner spacing */
+    box-sizing: border-box;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+/* Game Grid Container */
+#game-grid-container {
+    width: 65%; /* Take 80% of the game-container's width */
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffffff33;  */
+    padding: 10px; /* Optional padding */
+    /* border-radius: 15px; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  */
+}
+
+/* Game Grid */
+#game-grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr); /* Adjust based on grid size */
+    grid-template-rows: repeat(3, 1fr); /* Adjust based on grid size */
+    width: 100%;
+    aspect-ratio: 1;
+    /* background-color: #f7f7f7;
+    border: 2px solid #ddd; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* Grid Cell */
+.grid-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-cell:hover {
+    background-color: #d6d6d6;
+}
+
+.dark-mode .grid-cell {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .grid-cell:hover {
+    background-color: #666;
+}
+
+/* Results Page */
+#results-container {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 0.5s ease-in-out;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    width: 65%;
+    transition: transform 0.3s ease;
+    padding: 20px; /* Padding for inner spacing */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#stats {
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.7s ease;
+}
+
+#last-game-result {
+    color: #ff758c;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#history-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.7s ease;
+}
+
+#history-table th, #history-table td {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#history-table th {
+    background-color: #ff758c;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#history-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 150px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+}
+
+/* Home Page Styles */
+#home-container {
+    text-align: center;
+    /* margin-top: 50px; */
+    font-family: 'Poppins', Arial, sans-serif;
+    animation: fadeIn 0.5s ease-in-out;
+    color: #ffffff;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* max-width: 600px; */
+    margin: 5% 10%;
+}
+
+#home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#home-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#home-container ul {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 80%;
+    /* max-width: 500px; */
+}
+
+#home-container ul li {
+    margin-bottom: 10px;
+    background: #ffffff;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#home-container img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); */
+    transition: transform 0.3s ease;
+}
+
+#home-container img:hover {
+    transform: scale(1.05);
+}
+
+#home-container ul li img {
+    width: 40px;
+    height: 40px;
+    /* border-radius: 50%; */
+    margin-right: 10px;
+    margin-top: 0;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+#start-game, #learn-more {
+    margin-top: 20px;
+    padding: 12px;
+    width: 160px;
+    font-size: 1rem;
+    background: linear-gradient(90deg, #1f4037, #99f2c8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin: 10px;
+}
+
+#start-game:hover, #learn-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+#learn-more {
+    background: linear-gradient(90deg, #fc4a1a, #f7b733);
+}
+
+/* Home Page: How to Play Instructions */
+#how-to-play {
+    background-color: #ffffff;
+    padding: 20px;
+    /* margin-top: 30px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* text-align: left; */
+    color: #333;
+    max-width: 80%;
+    margin: 40px auto;
+    /* width: 80%;
+    margin: 5%; */
+    animation: slideIn 1s ease-out;
+}
+
+#how-to-play h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#how-to-play p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#how-to-play ul {
+    list-style-type: disc;
+    /* margin-left: 20px; */
+    width: 80%;
+    color: #555;
+}
+
+#how-to-play ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#how-to-play ul li strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* 🎨 Styles for Login & Register Pages Only */
+.login-page, .register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color, #f4f4f4); /* Uses your existing theme */
+}
+
+.login-container, .register-container {
+    background: var(--primary-bg, white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.login-container h1, .register-container h1 {
+    color: var(--primary-text, black);
+    margin-bottom: 15px;
+}
+
+.login-container input, .register-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-container button, .register-container button {
+    width: 100%;
+    padding: 10px;
+    background: var(--button-bg, #007bff);
+    color: var(--button-text, white);
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover, .register-container button:hover {
+    background: var(--button-hover, #0056b3);
+}
+
+.login-container p, .register-container p {
+    margin-top: 10px;
+}
+
+.login-container a, .register-container a {
+    color: var(--link-color, #007bff);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover, .register-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* 🎨 Home Button Styles */
+.home-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg, #007bff);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    background-color: var(--button-hover, #0056b3);
+}

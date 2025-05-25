@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="home-container">
+        <h1>Welcome to Tic-Tac-Toe Pro!</h1>
+        <p>Challenge your friends or play against our AI in this fun and engaging game. Explore different themes, grid sizes, and more!</p>
+    
+        <ul>
+            <li><img src="images/fun.png" alt="Fun Icon"> Enjoy endless fun with friends and family!</li>
+            <li><img src="images/challenge.png" alt="Challenge Icon"> Test your skills with challenging AI modes.</li>
+            <li><img src="images/theme.png" alt="Themes Icon"> Customize your experience with vibrant themes.</li>
+        </ul>
+    
+        <img src="images/tic-tac-toe.png" alt="Tic Tac Toe Image">
+
+        
+        <div id="how-to-play">
+            <h2>How to Play</h2>
+            <p>Tic-Tac-Toe is a classic game where two players take turns marking the spaces in a 3x3 grid. The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.</p>
+            <ul>
+                <li><strong>Objective:</strong> Get three of your marks (X or O) in a row.</li>
+                <li><strong>Turns:</strong> Players alternate placing their marks on the grid.</li>
+                <li><strong>Winning:</strong> The first player to align three marks in a row wins.</li>
+                <li><strong>AI Mode:</strong> In single-player mode, you’ll face an AI opponent that randomly selects empty spaces.</li>
+            </ul>
+        </div>
+    
+        <button id="learn-more">Learn More</button>
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <script>
+        document.getElementById("start-game").addEventListener("click", () => {
+            window.location.href = "login.html"; // Redirect to login page first
+        });
+
+        document.getElementById("learn-more").addEventListener("click", () => {
+            window.location.href = "https://en.wikipedia.org/wiki/Tic-tac-toe";  // Replace with the desired URL
+        });
+    </script>
+</body>
+</html>

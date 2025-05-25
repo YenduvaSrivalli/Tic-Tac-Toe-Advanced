@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="results-container">
+        <h1>Game Results</h1>
+        <div id="stats">
+            <!-- <p><strong>Total Matches Played:</strong> <span id="matches-played">0</span></p>
+            <p><strong>Wins for <span id="player1-name"></span>:</strong> <span id="player1-wins">0</span></p>
+            <p><strong>Wins for <span id="player2-name"></span>:</strong> <span id="player2-wins">0</span></p>
+            <p><strong>Draws:</strong> <span id="draws">0</span></p> -->
+            <p><strong><span id="last-game-result">N/A</span></strong></p>
+        </div>
+        <h1>Game History</h1>
+        <table id="history-table">
+            <thead>
+                <tr>
+                    <th>Match</th>
+                    <th>Players</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="history-body">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <button id="play-again">Play Again</button>
+        <button id="go-home">Home</button>
+    </div>
+    <script src="results.js"></script>
+</body>
+</html>
