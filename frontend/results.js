@@ -4,7 +4,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // Fetch game history from the backend
-        const response = await fetch("http://localhost:3000/game-results");
+        const API_BASE = window.location.hostname === "localhost"
+            ? "http://localhost:3000"
+            : "https://tic-tac-toe-advanced.onrender.com/game-results"; // 🔁 Replace with your actual backend URL
+
+        const response = await fetch(`${API_BASE}/game-results`);
+
+
         const gameHistory = await response.json();
 
         console.log("Fetched Game History:", gameHistory);
