@@ -131,10 +131,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-
-
-app.get('/my-ip', (req, res) => {
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  res.send(`Render server IP: ${ip}`);
-});
