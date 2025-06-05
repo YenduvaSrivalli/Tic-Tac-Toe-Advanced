@@ -104,6 +104,13 @@ app.get("/game-history", isAuthenticated, async (req, res) => {
 app.post("/save-game", async (req, res) => {
     const { player1, player2, matchResult } = req.body;
     try {
+
+        if (!player1 || !player2 || !matchResult) {
+            return res.status(400).json({ message: "Missing required fields" });
+        }
+
+
+
         const newGame = new Game({ player1, player2, matchResult });
         await newGame.save();
         res.json({ message: "Game result saved successfully!" });
