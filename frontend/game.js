@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     
         try {
-            const response = await fetch("http://localhost:3000/save-game", {
+            const response = await fetch("https://tic-tac-toe-three-azure.vercel.app/save-game", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(gameDetails)

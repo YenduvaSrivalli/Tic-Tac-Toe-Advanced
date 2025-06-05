@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         // Fetch game history from the backend
-        const response = await fetch("http://localhost:3000/game-results");
+        const response = await fetch("https://tic-tac-toe-three-azure.vercel.app/game-results");
         const gameHistory = await response.json();
 
         console.log("Fetched Game History:", gameHistory);

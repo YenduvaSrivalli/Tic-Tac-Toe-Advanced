@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("reg-password").value;
   
         try {
-            const response = await fetch("http://localhost:3000/register", {
+            const response = await fetch("https://tic-tac-toe-three-azure.vercel.app/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }),
